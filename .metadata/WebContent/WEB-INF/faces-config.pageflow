@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14146069187640" configfile="/BlaBlaCar/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="login" id="pf14152100245525" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" outlinks="pf14152100245526 pf14152100245527" inlinks="pf14152100245528" path="/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="falloLogin" id="pf14152100245539" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14152100245526" path="/falloLogin.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="bienvenido" id="pf141521002455310" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" outlinks="pf141521002455311" inlinks="pf14152100245527 pf141521002455312 pf141521002455313" path="/bienvenido.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="registrar" id="pf141521002455314" referenceLink="//@navigationRule.8/@fromViewId|" outlinks="pf141521002455315 pf141521002455312 pf141521002455313 pf141521002455316" inlinks="pf141521002455311 pf141521002455317" path="/registrar.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="falloRegistrar" id="pf141521002455318" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" outlinks="pf141521002455317 pf14152100245528" inlinks="pf141521002455315 pf141521002455316" path="/falloRegistrar.jsp"/>
+  <links id="pf14152100245526" target="pf14152100245539" source="pf14152100245525" outcome="no"/>
+  <links id="pf14152100245527" target="pf141521002455310" source="pf14152100245525" outcome="si"/>
+  <links id="pf141521002455311" target="pf141521002455314" source="pf141521002455310" outcome="registrar"/>
+  <links id="pf141521002455315" target="pf141521002455318" source="pf141521002455314" outcome="no"/>
+  <links id="pf141521002455312" target="pf141521002455310" source="pf141521002455314" outcome="si"/>
+  <links id="pf141521002455317" target="pf141521002455314" source="pf141521002455318" outcome="registrar"/>
+  <links id="pf14152100245528" target="pf14152100245525" source="pf141521002455318" outcome="login"/>
+  <links id="pf141521002455313" target="pf141521002455310" source="pf141521002455314" outcome="si"/>
+  <links id="pf141521002455316" target="pf141521002455318" source="pf141521002455314" outcome="no"/>
+</pageflow:Pageflow>
